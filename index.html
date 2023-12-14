@@ -1,13 +1,32 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Приложение для бронирования билетов в кино</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div class="app">
+      <header class="app__header">
+        <div class="app__header__top">
+          <button class="app__header__button">
+            <img src="images/notification-line.svg" alt="Notification">
+            Notification
+          </button>
+          <button class="app__header__button">
+            <img src="images/search.svg" alt="Search">
+            Search
+          </button>
+        </div>
+        <nav class="app__header-nav">
+          <ul class="app__header-nav-list">
+            <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Все жанры</a></li>
+            <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Триллер</a></li>
+            <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Комедии</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
