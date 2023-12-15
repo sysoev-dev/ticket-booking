@@ -1,12 +1,9 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Carme', sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -18,6 +15,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -38,17 +36,26 @@ h1 {
 .app {
   max-width: 500px;
   width: 100%;
+  position: relative;
   max-height: 800px;
   height: 100vh;
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
   background-color: #151618;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.app__header {
+  position: relative;
+  z-index: 1;
 }
 
 .app__header__top {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .app__header__button {
@@ -71,5 +78,98 @@ h1 {
 }
 
 .app__header-nav-list {
+  background: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(7px);
+  border-radius: 30px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 10px;
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.app__header-nav-item {
+  display: flex;
+  border-radius: 22px;
+}
+
+.app__header-nav-link {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.app__header-nav-link:hover {
   background-color: rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+
+.app__header-nav-link--active {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.films__list {
+  position: absolute;
+  top: -200px;
+  left: 100px;
+  width: 320px;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow-y: scroll;
+}
+
+.films__item {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 420px;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 50px;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 10px;
+  box-shadow: inset 0px -100px 23px -3px rgba(152, 120, 187, 0.8);
+}
+
+.films__item--1 {
+  background-image: url(./images/films/black-adam.webp);
+}
+
+.films__item--2 {
+  background-image: url(./images/films/thor.jpg);
+}
+
+.films__item--3 {
+  background-image: url(./images/films/flash.jpg);
+}
+
+.films__item__rating {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #ffd645;
+  color: #151618;
+}
+
+.films__item-text {
+  text-align: left;
+}
+
+.films__item__title {
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.films__item__genres {
+  margin: 5px 0;
 }
