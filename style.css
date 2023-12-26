@@ -139,7 +139,7 @@ h1 {
 
 .films__list {
   position: absolute;
-
+  scroll-behavior: smooth;
   top: -200px;
   left: 100px;
   width: 320px;
