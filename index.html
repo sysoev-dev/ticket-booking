@@ -7,37 +7,42 @@
   <title>Приложение для бронирования билетов в кино</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Carme&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="app">
     <header class="app__header">
-      <div class="app__header__top">
-        <button class="app__header__button">
+      <div class="app__header-top">
+        <button class="app__header-button">
           <img src="images/notification-line.svg" alt="Notification">
-          Notification
+          Уведомления
         </button>
-        <button class="app__header__button">
-          <img src="images/search.svg" alt="Search">
-          Search
-        </button>
+
+        <form class="app__header-form" action="#">
+          <input class="app__header-input" type="search" placeholder="Название фильма">
+          <button class="app__header-button app__header-button-search">
+            <img src="images/search.svg" alt="Search">
+            Поиск
+          </button>
+        </form>
+
       </div>
       <nav class="app__header-nav">
         <ul class="app__header-nav-list">
-          <li class="app__header-nav-item"><a class="app__header-nav-link app__header-nav-link--active" href="#">All</a>
+          <li class="app__header-nav-item"><a class="app__header-nav-link app__header-nav-link--active" href="#">Все</a>
           </li>
-          <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Horor</a></li>
-          <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Thriller</a></li>
-          <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Action</a></li>
-          <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Comedy</a></li>
-          <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Fantasy</a></li>
+          <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Боевик</a></li>
+          <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Триллер</a></li>
+          <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Криминал</a></li>
+          <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Комедия</a></li>
+          <li class="app__header-nav-item"><a class="app__header-nav-link" href="#">Фэнтези</a></li>
         </ul>
       </nav>
     </header>
     <main class="films">
       <ul class="films__list">
-        <li class="films__item films__item--1">
+        <!-- <li class="films__item films__item--1">
           <p class="films__item__rating">IMDB 9.1</p>
           <div class="films__item-text">
             <h3 class="films__item__title">Thor love and thunder</h3>
@@ -50,7 +55,8 @@
             <h3 class="films__item__title">Thor love and thunder</h3>
             <p class="films__item__genres">Action</p>
           </div>
-        </li>
+        </li> -->
+        <!--
         <li class="films__item films__item--3">
           <p class="films__item__rating">IMDB 9.1</p>
           <div class="films__item-text">
@@ -78,7 +84,7 @@
             <h3 class="films__item__title">Thor love and thunder</h3>
             <p class="films__item__genres">Action</p>
           </div>
-        </li>
+        </li> -->
       </ul>
     </main>
   </div>
