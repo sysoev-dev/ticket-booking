@@ -140,13 +140,12 @@ h1 {
 .films__list {
   position: absolute;
   scroll-behavior: smooth;
-  top: -200px;
+  top: 0;
   left: 100px;
   width: 320px;
   max-height: 100vh;
   margin: 0;
   padding: 0;
-  /* padding-top: 350px; */
   list-style: none;
   overflow-y: scroll;
 }
