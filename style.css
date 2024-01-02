@@ -209,7 +209,6 @@ h1 {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   z-index: 1;
 }
 
@@ -226,6 +225,7 @@ h1 {
 
 .film {
   padding: 0 15px;
+  padding-top: 260px;
 }
 
 .film__genres-list {
@@ -240,22 +240,40 @@ h1 {
   background-color: rgba(255, 255, 255, 0.15);
   padding: 5px 10px;
   border-radius: 10px;
-  color: #aaababd9;
+  color: #cacaca;
 }
 
 .film__title {
   margin: 20px 0;
   text-align: left;
   font-size: 32px;
-  color: #aaababd9;
+  color: #dddddd;
 }
 
 .film__info {
   display: flex;
   gap: 50px;
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
   list-style: none;
+}
+
+.film__info-item {
+  position: relative;
+  margin-right: 10px;
+}
+
+.film__info-item::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -33px;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-position: top;
 }
 
 .film__info-item--rating {
@@ -263,4 +281,70 @@ h1 {
   border-radius: 5px;
   background-color: #cdac38;
   color: #151618;
+}
+
+.film__info-item--date::before {
+  background-image: url(images/calendar.svg);
+}
+
+.film__info-item--time::before {
+  background-image: url(images/clock.svg);
+}
+
+.tabs {
+  position: relative;
+}
+.tab,
+.tab-title {
+  display: inline-block;
+}
+.tab input[type='radio'] {
+  display: none;
+}
+.tab-title {
+  background: rgba(62, 62, 62, 0.6);
+  font-weight: 700;
+  padding: 20px 48px;
+  border-radius: 15px;
+  border-bottom: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+.tab-content {
+  position: absolute;
+  padding: 10px;
+  left: 0;
+  text-align: justify;
+  width: calc(100% - 20px);
+  display: none;
+  max-height: 160px;
+  overflow-y: scroll;
+}
+.tab :checked + .tab-title {
+  position: relative;
+  background: #bebebe;
+  color: #151618;
+  z-index: 1;
+}
+.tab :checked ~ .tab-content {
+  display: block;
+}
+
+.film__reserv-btn {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 20px;
+  border-radius: 15px;
+  border: none;
+  margin-top: 180px;
+  background-color: rgba(32, 32, 32, 0.85);
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.film__reserv-btn:hover {
+  background-color: rgba(32, 32, 32, 0.95);
 }

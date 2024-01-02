@@ -16,10 +16,10 @@
   <div class="app">
     <header class="app__header">
       <div class="app__header-top">
-        <button class="app__header-button">
-          <img src="images/left-arrow.svg" alt="Назад">
-          Уведомления
-        </button>
+        <a href='/' class="app__header-button">
+          <img src="images/left-arrow.svg" alt="На главную">
+          На главную
+        </a>
 
         <form class="app__header-form" action="#">
           <input class="app__header-input" type="search" placeholder="Название фильма">
@@ -42,13 +42,35 @@
         <li class="film__info-item film__info-item--time">1 сезон</li>
         <li class="film__info-item film__info-item--date">2023</li>
       </ul>
-      <p class="film__description">Конец 1980-х. Пока родители борются за выживание, брошенные всеми дети сбиваются
-        в уличные стаи и бьются за асфальт. Буквально, чтобы контролировать всё, что стоит на «их» земле
-        или передвигается по ней. Среди всеобщей нищеты — понятные правила жизни, поддержка и слово пацана, которое
-        сильнее клятвы.\n14-летний Андрей из интеллигентной семьи, он учится в музыкальной школе и живёт с мамой
-        и пятилетней сестрой. Парень регулярно сталкивается с прессингом уличных подростков и, чтобы защититься, заводит
-        дружбу с гопниками. Один из них—14 - летний Марат — становится проводником Андрея в сложноустроенный мир улиц.
-      </p>
+      <div class="tabs">
+        <div class="tab">
+          <input type="radio" id="tab1" name="tab-group" checked>
+          <label for="tab1" class="tab-title">Описание</label>
+          <section class="tab-content">Конец 1980-х. Пока родители борются за выживание, брошенные всеми дети сбиваются
+            в уличные стаи и бьются за асфальт. Буквально, чтобы контролировать всё, что стоит на «их» земле
+            или передвигается по ней. Среди всеобщей нищеты — понятные правила жизни, поддержка и слово пацана, которое
+            сильнее клятвы. 14-летний Андрей из интеллигентной семьи, он учится в музыкальной школе и живёт с мамой
+            и пятилетней сестрой. Парень регулярно сталкивается с прессингом уличных подростков и, чтобы защититься,
+            заводит
+            дружбу с гопниками. Один из них 14 - летний Марат — становится проводником Андрея в сложноустроенный мир
+            улиц.</section>
+        </div>
+        <div class="tab">
+          <input type="radio" id="tab2" name="tab-group">
+          <label for="tab2" class="tab-title">Актеры</label>
+          <section class="tab-content">
+            <p>Список актеров</p>
+          </section>
+        </div>
+        <div class="tab">
+          <input type="radio" id="tab3" name="tab-group">
+          <label for="tab3" class="tab-title">Фото</label>
+          <section class="tab-content">
+            <p>Фото</p>
+          </section>
+        </div>
+      </div>
+      <button class='film__reserv-btn'>Забронировать</button>
     </main>
   </div>
   <!-- <script type="module" src="/main.js"></script> -->
